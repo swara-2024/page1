@@ -1,0 +1,312 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+background-image: url("./bag2.jpg");
+  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  /* background: rgba(31, 30, 30, 0.215); */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1900px;
+  margin: 0 auto;
+  /* background: rgba(252, 249, 249, 0.5); */
+  padding: 2rem ;
+}
+
+.s1{
+  color: red;
+}
+
+.navbar .logo {
+  color: #0a0a0a;
+  font-weight: 600;
+  font-size: 2.1rem;
+  text-decoration: none;
+}
+
+.navbar .logo span {
+  color: #C06B3E;
+}
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 14rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.navbar .menu-links li a{
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.navbar .menu-links:hover{
+    /* padding: 20px; */
+    animation:slidebg 5s linear infinite;
+}
+
+.navbar .socials button {
+    padding: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.navbar .socials a{
+    text-decoration: none;
+    color: rgb(255, 251, 251);
+}
+
+.socials button:hover{
+    /* background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%); */
+    animation:slidebg 5s linear infinite;
+    padding: 13px;
+}
+
+.navbar li a {
+  color: #0b0b0b;
+  text-decoration: none;
+  transition: 0.2s ease;
+  border-bottom: 2px solid black;
+}
+
+.navbar li a:hover {
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.hero-section {
+  height: 100vh;
+  /* background-image: url("images/animals.jpg");
+  background-position: center;
+  background-size: cover; */
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.hero-section .content {
+  max-width: 1900px;
+  height: 70vh;
+  margin: 0;
+  width: 100%;
+  color: #0b0a0a;
+  /* border: 8px solid black; */
+  padding: 2rem;
+  margin-top: 12px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+  background: rgba(95, 255, 47, 0.256); */
+}
+
+.hero-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.hero-section .content p {
+  font-weight: 400;
+  max-width: 600px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.hero-section .content p .s1{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.hero-section .content p .s2{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.hero-section .content button a{
+    text-decoration: none;
+    color: white;
+}
+
+.hero-section .content button {
+  /* background: rgb(22, 165, 22); */
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.hero-section .content button:hover {
+  color: #fff;
+  padding: 14px 35px ;
+  /* background-image: linear-gradient(to top, #0ba315 0%, #0a845e 100%); */
+}
+
+.image{
+            width: 200px; /* Set the width of your div */
+            /* height: 100vh; Set the height to 100% of the viewport height */
+             /* Set a background color (optional) */
+            position: fixed; /* Fix the position so it stays in place even when scrolling */
+            top: 16rem; /* Position from the top */
+            right:55rem; /* Position from the right */
+            bottom: 2rem;
+            border-radius: 12px;        
+}
+.image img{
+  border-radius: 100px;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* ************************** */
+.gallery {
+  --g: 8px;   /* the gap */
+  --s: 400px; /* the size */
+  display: grid;
+  border-radius: 50%;
+}
+.gallery > img {
+  grid-area: 1/1;
+  width: 400px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translate(var(--_x,0),var(--_y,0));
+  cursor: pointer;
+  z-index: 0;
+  transition: .3s, z-index 0s .3s;
+}
+.gallery img:hover {
+  --_i: 1;
+  z-index: 1;
+  transition: transform .2s, clip-path .3s .2s, z-index 0s;
+}
+.gallery:hover img {
+  transform: translate(0,0);
+}
+.gallery > img:nth-child(1) {
+  clip-path: polygon(50% 50%,calc(50%*var(--_i,0)) calc(120%*var(--_i,0)),0 calc(100%*var(--_i,0)),0 0,100% 0,100% calc(100%*var(--_i,0)),calc(100% - 50%*var(--_i,0)) calc(120%*var(--_i,0)));
+  --_y: calc(-1*var(--g))
+}
+.gallery > img:nth-child(2) {
+  clip-path: polygon(50% 50%,calc(100% - 120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100% - 100%*var(--_i,0)) 0,100% 0,100% 100%,calc(100% - 100%*var(--_i,0)) 100%,calc(100% - 120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
+  --_x: var(--g)
+}
+.gallery > img:nth-child(3) {
+  clip-path: polygon(50% 50%,calc(100% - 50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)),100% calc(100% - 120%*var(--_i,0)),100% 100%,0 100%,0 calc(100% - 100%*var(--_i,0)),calc(50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)));
+  --_y: var(--g)
+}
+.gallery > img:nth-child(4) {
+  clip-path: polygon(50% 50%,calc(120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100%*var(--_i,0)) 0,0 0,0 100%,calc(100%*var(--_i,0)) 100%,calc(120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
+  --_x: calc(-1*var(--g))
+}
+
+/* body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #3B8686;
+} */
+/* ************************** */
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+    
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #000;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
